@@ -1,0 +1,262 @@
+﻿
+Create database Tech
+GO
+
+USE [Tech]
+GO
+/****** Object:  Table [dbo].[Group]    Script Date: 3/23/2020 10:52:41 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[Group](
+	[GroupId] [int] IDENTITY(1,1) NOT NULL,
+	[GroupName] [nvarchar](100) NOT NULL,
+	[GroupStatus] [bit] NOT NULL,
+	[UpdatedDate] [datetime] NULL,
+	[CreatedDate] [datetime] NOT NULL,
+ CONSTRAINT [PK_Group] PRIMARY KEY CLUSTERED 
+(
+	[GroupId] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+GO
+/****** Object:  Table [dbo].[User]    Script Date: 3/23/2020 10:52:41 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[User](
+	[UserId] [int] IDENTITY(1,1) NOT NULL,
+	[UserName] [nvarchar](100) NOT NULL,
+	[GroupId] [int] NOT NULL,
+	[UserStatus] [bit] NULL,
+	[UpdatedDate] [datetime] NULL,
+	[CreatedDate] [datetime] NOT NULL,
+ CONSTRAINT [PK_User] PRIMARY KEY CLUSTERED 
+(
+	[UserId] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+GO
+SET IDENTITY_INSERT [dbo].[Group] ON 
+
+GO
+INSERT [dbo].[Group] ([GroupId], [GroupName], [GroupStatus], [UpdatedDate], [CreatedDate]) VALUES (1, N'dotnet', 1, NULL, CAST(0x0000AB8600000000 AS DateTime))
+GO
+INSERT [dbo].[Group] ([GroupId], [GroupName], [GroupStatus], [UpdatedDate], [CreatedDate]) VALUES (2, N'node', 1, NULL, CAST(0x0000AB8600000000 AS DateTime))
+GO
+SET IDENTITY_INSERT [dbo].[Group] OFF
+GO
+SET IDENTITY_INSERT [dbo].[User] ON 
+
+GO
+INSERT [dbo].[User] ([UserId], [UserName], [GroupId], [UserStatus], [UpdatedDate], [CreatedDate]) VALUES (1, N'Oliver', 1, 1, NULL, CAST(0x0000AC8600000000 AS DateTime))
+GO
+INSERT [dbo].[User] ([UserId], [UserName], [GroupId], [UserStatus], [UpdatedDate], [CreatedDate]) VALUES (2, N'George', 1, 1, NULL, CAST(0x0000AC8600000000 AS DateTime))
+GO
+INSERT [dbo].[User] ([UserId], [UserName], [GroupId], [UserStatus], [UpdatedDate], [CreatedDate]) VALUES (3, N'Harry', 1, 1, NULL, CAST(0x0000AC8600000000 AS DateTime))
+GO
+INSERT [dbo].[User] ([UserId], [UserName], [GroupId], [UserStatus], [UpdatedDate], [CreatedDate]) VALUES (4, N'Jack', 1, 1, NULL, CAST(0x0000AC8600000000 AS DateTime))
+GO
+INSERT [dbo].[User] ([UserId], [UserName], [GroupId], [UserStatus], [UpdatedDate], [CreatedDate]) VALUES (5, N'Jacob', 1, 1, NULL, CAST(0x0000AC8600000000 AS DateTime))
+GO
+INSERT [dbo].[User] ([UserId], [UserName], [GroupId], [UserStatus], [UpdatedDate], [CreatedDate]) VALUES (6, N'Noah', 1, 1, NULL, CAST(0x0000AC8600000000 AS DateTime))
+GO
+INSERT [dbo].[User] ([UserId], [UserName], [GroupId], [UserStatus], [UpdatedDate], [CreatedDate]) VALUES (7, N'Charlie', 1, 1, NULL, CAST(0x0000AC8600000000 AS DateTime))
+GO
+INSERT [dbo].[User] ([UserId], [UserName], [GroupId], [UserStatus], [UpdatedDate], [CreatedDate]) VALUES (8, N'Muhammad', 1, 1, NULL, CAST(0x0000AC8600000000 AS DateTime))
+GO
+INSERT [dbo].[User] ([UserId], [UserName], [GroupId], [UserStatus], [UpdatedDate], [CreatedDate]) VALUES (9, N'Thomas', 1, 1, NULL, CAST(0x0000AC8600000000 AS DateTime))
+GO
+INSERT [dbo].[User] ([UserId], [UserName], [GroupId], [UserStatus], [UpdatedDate], [CreatedDate]) VALUES (10, N'Oscar', 1, 1, NULL, CAST(0x0000AC8600000000 AS DateTime))
+GO
+INSERT [dbo].[User] ([UserId], [UserName], [GroupId], [UserStatus], [UpdatedDate], [CreatedDate]) VALUES (11, N'William', 1, 1, NULL, CAST(0x0000AC8600000000 AS DateTime))
+GO
+INSERT [dbo].[User] ([UserId], [UserName], [GroupId], [UserStatus], [UpdatedDate], [CreatedDate]) VALUES (12, N'James', 1, 1, NULL, CAST(0x0000AC8600000000 AS DateTime))
+GO
+INSERT [dbo].[User] ([UserId], [UserName], [GroupId], [UserStatus], [UpdatedDate], [CreatedDate]) VALUES (13, N'Henry', 1, 1, NULL, CAST(0x0000AC8600000000 AS DateTime))
+GO
+INSERT [dbo].[User] ([UserId], [UserName], [GroupId], [UserStatus], [UpdatedDate], [CreatedDate]) VALUES (14, N'Leo', 1, 1, NULL, CAST(0x0000AC8600000000 AS DateTime))
+GO
+INSERT [dbo].[User] ([UserId], [UserName], [GroupId], [UserStatus], [UpdatedDate], [CreatedDate]) VALUES (15, N'Alfie', 1, 1, NULL, CAST(0x0000AC8600000000 AS DateTime))
+GO
+INSERT [dbo].[User] ([UserId], [UserName], [GroupId], [UserStatus], [UpdatedDate], [CreatedDate]) VALUES (16, N'Joshua', 1, 1, NULL, CAST(0x0000AC8600000000 AS DateTime))
+GO
+INSERT [dbo].[User] ([UserId], [UserName], [GroupId], [UserStatus], [UpdatedDate], [CreatedDate]) VALUES (17, N'Freddie', 1, 1, NULL, CAST(0x0000AC8600000000 AS DateTime))
+GO
+INSERT [dbo].[User] ([UserId], [UserName], [GroupId], [UserStatus], [UpdatedDate], [CreatedDate]) VALUES (18, N'Archie', 1, 1, NULL, CAST(0x0000AC8600000000 AS DateTime))
+GO
+INSERT [dbo].[User] ([UserId], [UserName], [GroupId], [UserStatus], [UpdatedDate], [CreatedDate]) VALUES (19, N'Ethan', 1, 1, NULL, CAST(0x0000AC8600000000 AS DateTime))
+GO
+INSERT [dbo].[User] ([UserId], [UserName], [GroupId], [UserStatus], [UpdatedDate], [CreatedDate]) VALUES (20, N'Isaac', 1, 1, NULL, CAST(0x0000AC8600000000 AS DateTime))
+GO
+INSERT [dbo].[User] ([UserId], [UserName], [GroupId], [UserStatus], [UpdatedDate], [CreatedDate]) VALUES (21, N'Alexander', 1, 1, NULL, CAST(0x0000AC8600000000 AS DateTime))
+GO
+INSERT [dbo].[User] ([UserId], [UserName], [GroupId], [UserStatus], [UpdatedDate], [CreatedDate]) VALUES (22, N'Joseph', 1, 1, NULL, CAST(0x0000AC8600000000 AS DateTime))
+GO
+INSERT [dbo].[User] ([UserId], [UserName], [GroupId], [UserStatus], [UpdatedDate], [CreatedDate]) VALUES (23, N'Edward', 1, 1, NULL, CAST(0x0000AC8600000000 AS DateTime))
+GO
+INSERT [dbo].[User] ([UserId], [UserName], [GroupId], [UserStatus], [UpdatedDate], [CreatedDate]) VALUES (24, N'Samuel', 2, 1, NULL, CAST(0x0000AC8600000000 AS DateTime))
+GO
+INSERT [dbo].[User] ([UserId], [UserName], [GroupId], [UserStatus], [UpdatedDate], [CreatedDate]) VALUES (25, N'Max', 2, 1, NULL, CAST(0x0000AC8600000000 AS DateTime))
+GO
+INSERT [dbo].[User] ([UserId], [UserName], [GroupId], [UserStatus], [UpdatedDate], [CreatedDate]) VALUES (26, N'Daniel', 2, 1, NULL, CAST(0x0000AC8600000000 AS DateTime))
+GO
+INSERT [dbo].[User] ([UserId], [UserName], [GroupId], [UserStatus], [UpdatedDate], [CreatedDate]) VALUES (27, N'Arthur', 2, 1, NULL, CAST(0x0000AC8600000000 AS DateTime))
+GO
+INSERT [dbo].[User] ([UserId], [UserName], [GroupId], [UserStatus], [UpdatedDate], [CreatedDate]) VALUES (28, N'Lucas', 2, 1, NULL, CAST(0x0000AC8600000000 AS DateTime))
+GO
+INSERT [dbo].[User] ([UserId], [UserName], [GroupId], [UserStatus], [UpdatedDate], [CreatedDate]) VALUES (29, N'Mohammed', 2, 1, NULL, CAST(0x0000AC8600000000 AS DateTime))
+GO
+INSERT [dbo].[User] ([UserId], [UserName], [GroupId], [UserStatus], [UpdatedDate], [CreatedDate]) VALUES (30, N'Logan', 2, 1, NULL, CAST(0x0000AC8600000000 AS DateTime))
+GO
+INSERT [dbo].[User] ([UserId], [UserName], [GroupId], [UserStatus], [UpdatedDate], [CreatedDate]) VALUES (31, N'Theo', 2, 1, NULL, CAST(0x0000AC8600000000 AS DateTime))
+GO
+INSERT [dbo].[User] ([UserId], [UserName], [GroupId], [UserStatus], [UpdatedDate], [CreatedDate]) VALUES (32, N'Harrison', 2, 1, NULL, CAST(0x0000AC8600000000 AS DateTime))
+GO
+INSERT [dbo].[User] ([UserId], [UserName], [GroupId], [UserStatus], [UpdatedDate], [CreatedDate]) VALUES (33, N'Benjamin', 2, 1, NULL, CAST(0x0000AC8600000000 AS DateTime))
+GO
+INSERT [dbo].[User] ([UserId], [UserName], [GroupId], [UserStatus], [UpdatedDate], [CreatedDate]) VALUES (34, N'Mason', 2, 1, NULL, CAST(0x0000AC8600000000 AS DateTime))
+GO
+INSERT [dbo].[User] ([UserId], [UserName], [GroupId], [UserStatus], [UpdatedDate], [CreatedDate]) VALUES (35, N'Sebastian', 2, 1, NULL, CAST(0x0000AC8600000000 AS DateTime))
+GO
+INSERT [dbo].[User] ([UserId], [UserName], [GroupId], [UserStatus], [UpdatedDate], [CreatedDate]) VALUES (36, N'Finley', 2, 1, NULL, CAST(0x0000AC8600000000 AS DateTime))
+GO
+INSERT [dbo].[User] ([UserId], [UserName], [GroupId], [UserStatus], [UpdatedDate], [CreatedDate]) VALUES (37, N'Adam', 2, 1, NULL, CAST(0x0000AC8600000000 AS DateTime))
+GO
+INSERT [dbo].[User] ([UserId], [UserName], [GroupId], [UserStatus], [UpdatedDate], [CreatedDate]) VALUES (38, N'Dylan', 2, 1, NULL, CAST(0x0000AC8600000000 AS DateTime))
+GO
+INSERT [dbo].[User] ([UserId], [UserName], [GroupId], [UserStatus], [UpdatedDate], [CreatedDate]) VALUES (39, N'Zachary', 2, 1, NULL, CAST(0x0000AC8600000000 AS DateTime))
+GO
+INSERT [dbo].[User] ([UserId], [UserName], [GroupId], [UserStatus], [UpdatedDate], [CreatedDate]) VALUES (40, N'Riley', 2, 1, NULL, CAST(0x0000AC8600000000 AS DateTime))
+GO
+INSERT [dbo].[User] ([UserId], [UserName], [GroupId], [UserStatus], [UpdatedDate], [CreatedDate]) VALUES (41, N'Teddy', 2, 1, NULL, CAST(0x0000AC8600000000 AS DateTime))
+GO
+INSERT [dbo].[User] ([UserId], [UserName], [GroupId], [UserStatus], [UpdatedDate], [CreatedDate]) VALUES (42, N'Theodore', 2, 1, NULL, CAST(0x0000AC8600000000 AS DateTime))
+GO
+INSERT [dbo].[User] ([UserId], [UserName], [GroupId], [UserStatus], [UpdatedDate], [CreatedDate]) VALUES (43, N'David', 2, 1, NULL, CAST(0x0000AC8600000000 AS DateTime))
+GO
+INSERT [dbo].[User] ([UserId], [UserName], [GroupId], [UserStatus], [UpdatedDate], [CreatedDate]) VALUES (44, N'Toby', 2, 1, NULL, CAST(0x0000AC8600000000 AS DateTime))
+GO
+INSERT [dbo].[User] ([UserId], [UserName], [GroupId], [UserStatus], [UpdatedDate], [CreatedDate]) VALUES (45, N'Jake', 2, 1, NULL, CAST(0x0000AC8600000000 AS DateTime))
+GO
+INSERT [dbo].[User] ([UserId], [UserName], [GroupId], [UserStatus], [UpdatedDate], [CreatedDate]) VALUES (46, N'Louie', 2, 1, NULL, CAST(0x0000AC8600000000 AS DateTime))
+GO
+INSERT [dbo].[User] ([UserId], [UserName], [GroupId], [UserStatus], [UpdatedDate], [CreatedDate]) VALUES (47, N'Elijah', 1, 1, NULL, CAST(0x0000AC8600000000 AS DateTime))
+GO
+INSERT [dbo].[User] ([UserId], [UserName], [GroupId], [UserStatus], [UpdatedDate], [CreatedDate]) VALUES (48, N'Reuben', 1, 1, NULL, CAST(0x0000AC8600000000 AS DateTime))
+GO
+INSERT [dbo].[User] ([UserId], [UserName], [GroupId], [UserStatus], [UpdatedDate], [CreatedDate]) VALUES (49, N'Arlo', 1, 1, NULL, CAST(0x0000AC8600000000 AS DateTime))
+GO
+INSERT [dbo].[User] ([UserId], [UserName], [GroupId], [UserStatus], [UpdatedDate], [CreatedDate]) VALUES (50, N'Hugo', 1, 1, NULL, CAST(0x0000AC8600000000 AS DateTime))
+GO
+INSERT [dbo].[User] ([UserId], [UserName], [GroupId], [UserStatus], [UpdatedDate], [CreatedDate]) VALUES (51, N'Luca', 1, 1, NULL, CAST(0x0000AC8600000000 AS DateTime))
+GO
+INSERT [dbo].[User] ([UserId], [UserName], [GroupId], [UserStatus], [UpdatedDate], [CreatedDate]) VALUES (52, N'Jaxon', 1, 1, NULL, CAST(0x0000AC8600000000 AS DateTime))
+GO
+INSERT [dbo].[User] ([UserId], [UserName], [GroupId], [UserStatus], [UpdatedDate], [CreatedDate]) VALUES (53, N'Matthew', 1, 1, NULL, CAST(0x0000AC8600000000 AS DateTime))
+GO
+INSERT [dbo].[User] ([UserId], [UserName], [GroupId], [UserStatus], [UpdatedDate], [CreatedDate]) VALUES (54, N'Harvey', 1, 1, NULL, CAST(0x0000AC8600000000 AS DateTime))
+GO
+INSERT [dbo].[User] ([UserId], [UserName], [GroupId], [UserStatus], [UpdatedDate], [CreatedDate]) VALUES (55, N'Reggie', 1, 1, NULL, CAST(0x0000AC8600000000 AS DateTime))
+GO
+INSERT [dbo].[User] ([UserId], [UserName], [GroupId], [UserStatus], [UpdatedDate], [CreatedDate]) VALUES (56, N'Michael', 1, 1, NULL, CAST(0x0000AC8600000000 AS DateTime))
+GO
+INSERT [dbo].[User] ([UserId], [UserName], [GroupId], [UserStatus], [UpdatedDate], [CreatedDate]) VALUES (57, N'Harley', 1, 1, NULL, CAST(0x0000AC8600000000 AS DateTime))
+GO
+INSERT [dbo].[User] ([UserId], [UserName], [GroupId], [UserStatus], [UpdatedDate], [CreatedDate]) VALUES (58, N'Jude', 1, 1, NULL, CAST(0x0000AC8600000000 AS DateTime))
+GO
+INSERT [dbo].[User] ([UserId], [UserName], [GroupId], [UserStatus], [UpdatedDate], [CreatedDate]) VALUES (59, N'Albert', 1, 1, NULL, CAST(0x0000AC8600000000 AS DateTime))
+GO
+INSERT [dbo].[User] ([UserId], [UserName], [GroupId], [UserStatus], [UpdatedDate], [CreatedDate]) VALUES (60, N'Tommy', 1, 1, NULL, CAST(0x0000AC8600000000 AS DateTime))
+GO
+INSERT [dbo].[User] ([UserId], [UserName], [GroupId], [UserStatus], [UpdatedDate], [CreatedDate]) VALUES (61, N'Luke', 1, 1, NULL, CAST(0x0000AC8600000000 AS DateTime))
+GO
+INSERT [dbo].[User] ([UserId], [UserName], [GroupId], [UserStatus], [UpdatedDate], [CreatedDate]) VALUES (62, N'Stanley', 1, 1, NULL, CAST(0x0000AC8600000000 AS DateTime))
+GO
+INSERT [dbo].[User] ([UserId], [UserName], [GroupId], [UserStatus], [UpdatedDate], [CreatedDate]) VALUES (63, N'Jenson', 1, 1, NULL, CAST(0x0000AC8600000000 AS DateTime))
+GO
+INSERT [dbo].[User] ([UserId], [UserName], [GroupId], [UserStatus], [UpdatedDate], [CreatedDate]) VALUES (64, N'Frankie', 2, 1, NULL, CAST(0x0000AC8600000000 AS DateTime))
+GO
+INSERT [dbo].[User] ([UserId], [UserName], [GroupId], [UserStatus], [UpdatedDate], [CreatedDate]) VALUES (65, N'Jayden', 2, 1, NULL, CAST(0x0000AC8600000000 AS DateTime))
+GO
+INSERT [dbo].[User] ([UserId], [UserName], [GroupId], [UserStatus], [UpdatedDate], [CreatedDate]) VALUES (66, N'Gabriel', 2, 1, NULL, CAST(0x0000AC8600000000 AS DateTime))
+GO
+INSERT [dbo].[User] ([UserId], [UserName], [GroupId], [UserStatus], [UpdatedDate], [CreatedDate]) VALUES (67, N'Elliot', 2, 1, NULL, CAST(0x0000AC8600000000 AS DateTime))
+GO
+INSERT [dbo].[User] ([UserId], [UserName], [GroupId], [UserStatus], [UpdatedDate], [CreatedDate]) VALUES (68, N'Mohammad', 2, 1, NULL, CAST(0x0000AC8600000000 AS DateTime))
+GO
+INSERT [dbo].[User] ([UserId], [UserName], [GroupId], [UserStatus], [UpdatedDate], [CreatedDate]) VALUES (69, N'Ronnie', 2, 1, NULL, CAST(0x0000AC8600000000 AS DateTime))
+GO
+INSERT [dbo].[User] ([UserId], [UserName], [GroupId], [UserStatus], [UpdatedDate], [CreatedDate]) VALUES (70, N'Charles', 2, 1, NULL, CAST(0x0000AC8600000000 AS DateTime))
+GO
+INSERT [dbo].[User] ([UserId], [UserName], [GroupId], [UserStatus], [UpdatedDate], [CreatedDate]) VALUES (71, N'Louis', 2, 1, NULL, CAST(0x0000AC8600000000 AS DateTime))
+GO
+INSERT [dbo].[User] ([UserId], [UserName], [GroupId], [UserStatus], [UpdatedDate], [CreatedDate]) VALUES (72, N'Elliott', 2, 1, NULL, CAST(0x0000AC8600000000 AS DateTime))
+GO
+INSERT [dbo].[User] ([UserId], [UserName], [GroupId], [UserStatus], [UpdatedDate], [CreatedDate]) VALUES (73, N'Frederick', 2, 1, NULL, CAST(0x0000AC8600000000 AS DateTime))
+GO
+INSERT [dbo].[User] ([UserId], [UserName], [GroupId], [UserStatus], [UpdatedDate], [CreatedDate]) VALUES (74, N'Nathan', 2, 1, NULL, CAST(0x0000AC8600000000 AS DateTime))
+GO
+INSERT [dbo].[User] ([UserId], [UserName], [GroupId], [UserStatus], [UpdatedDate], [CreatedDate]) VALUES (75, N'Lewis', 2, 1, NULL, CAST(0x0000AC8600000000 AS DateTime))
+GO
+INSERT [dbo].[User] ([UserId], [UserName], [GroupId], [UserStatus], [UpdatedDate], [CreatedDate]) VALUES (76, N'Blake', 2, 1, NULL, CAST(0x0000AC8600000000 AS DateTime))
+GO
+INSERT [dbo].[User] ([UserId], [UserName], [GroupId], [UserStatus], [UpdatedDate], [CreatedDate]) VALUES (77, N'Rory', 2, 1, NULL, CAST(0x0000AC8600000000 AS DateTime))
+GO
+INSERT [dbo].[User] ([UserId], [UserName], [GroupId], [UserStatus], [UpdatedDate], [CreatedDate]) VALUES (78, N'Ollie', 2, 1, NULL, CAST(0x0000AC8600000000 AS DateTime))
+GO
+INSERT [dbo].[User] ([UserId], [UserName], [GroupId], [UserStatus], [UpdatedDate], [CreatedDate]) VALUES (79, N'Ryan', 2, 1, NULL, CAST(0x0000AC8600000000 AS DateTime))
+GO
+INSERT [dbo].[User] ([UserId], [UserName], [GroupId], [UserStatus], [UpdatedDate], [CreatedDate]) VALUES (80, N'Tyler', 2, 1, NULL, CAST(0x0000AC8600000000 AS DateTime))
+GO
+INSERT [dbo].[User] ([UserId], [UserName], [GroupId], [UserStatus], [UpdatedDate], [CreatedDate]) VALUES (81, N'Jackson', 1, 1, NULL, CAST(0x0000AC8600000000 AS DateTime))
+GO
+INSERT [dbo].[User] ([UserId], [UserName], [GroupId], [UserStatus], [UpdatedDate], [CreatedDate]) VALUES (82, N'Dexter', 1, 1, NULL, CAST(0x0000AC8600000000 AS DateTime))
+GO
+INSERT [dbo].[User] ([UserId], [UserName], [GroupId], [UserStatus], [UpdatedDate], [CreatedDate]) VALUES (83, N'Alex', 1, 1, NULL, CAST(0x0000AC8600000000 AS DateTime))
+GO
+INSERT [dbo].[User] ([UserId], [UserName], [GroupId], [UserStatus], [UpdatedDate], [CreatedDate]) VALUES (84, N'Austin', 1, 1, NULL, CAST(0x0000AC8600000000 AS DateTime))
+GO
+INSERT [dbo].[User] ([UserId], [UserName], [GroupId], [UserStatus], [UpdatedDate], [CreatedDate]) VALUES (85, N'Kai', 1, 1, NULL, CAST(0x0000AC8600000000 AS DateTime))
+GO
+INSERT [dbo].[User] ([UserId], [UserName], [GroupId], [UserStatus], [UpdatedDate], [CreatedDate]) VALUES (86, N'Albie', 1, 1, NULL, CAST(0x0000AC8600000000 AS DateTime))
+GO
+INSERT [dbo].[User] ([UserId], [UserName], [GroupId], [UserStatus], [UpdatedDate], [CreatedDate]) VALUES (87, N'Caleb', 1, 1, NULL, CAST(0x0000AC8600000000 AS DateTime))
+GO
+INSERT [dbo].[User] ([UserId], [UserName], [GroupId], [UserStatus], [UpdatedDate], [CreatedDate]) VALUES (88, N'Carter', 1, 1, NULL, CAST(0x0000AC8600000000 AS DateTime))
+GO
+INSERT [dbo].[User] ([UserId], [UserName], [GroupId], [UserStatus], [UpdatedDate], [CreatedDate]) VALUES (89, N'Bobby', 1, 1, NULL, CAST(0x0000AC8600000000 AS DateTime))
+GO
+INSERT [dbo].[User] ([UserId], [UserName], [GroupId], [UserStatus], [UpdatedDate], [CreatedDate]) VALUES (90, N'Ezra', 1, 1, NULL, CAST(0x0000AC8600000000 AS DateTime))
+GO
+INSERT [dbo].[User] ([UserId], [UserName], [GroupId], [UserStatus], [UpdatedDate], [CreatedDate]) VALUES (91, N'Ellis', 1, 1, NULL, CAST(0x0000AC8600000000 AS DateTime))
+GO
+INSERT [dbo].[User] ([UserId], [UserName], [GroupId], [UserStatus], [UpdatedDate], [CreatedDate]) VALUES (92, N'Leon', 1, 1, NULL, CAST(0x0000AC8600000000 AS DateTime))
+GO
+INSERT [dbo].[User] ([UserId], [UserName], [GroupId], [UserStatus], [UpdatedDate], [CreatedDate]) VALUES (93, N'Roman', 1, 1, NULL, CAST(0x0000AC8600000000 AS DateTime))
+GO
+INSERT [dbo].[User] ([UserId], [UserName], [GroupId], [UserStatus], [UpdatedDate], [CreatedDate]) VALUES (94, N'Ibrahim', 1, 1, NULL, CAST(0x0000AC8600000000 AS DateTime))
+GO
+INSERT [dbo].[User] ([UserId], [UserName], [GroupId], [UserStatus], [UpdatedDate], [CreatedDate]) VALUES (95, N'Aaron', 2, 1, NULL, CAST(0x0000AC8600000000 AS DateTime))
+GO
+INSERT [dbo].[User] ([UserId], [UserName], [GroupId], [UserStatus], [UpdatedDate], [CreatedDate]) VALUES (96, N'Liam', 2, 1, NULL, CAST(0x0000AC8600000000 AS DateTime))
+GO
+INSERT [dbo].[User] ([UserId], [UserName], [GroupId], [UserStatus], [UpdatedDate], [CreatedDate]) VALUES (97, N'Jesse', 2, 1, NULL, CAST(0x0000AC8600000000 AS DateTime))
+GO
+INSERT [dbo].[User] ([UserId], [UserName], [GroupId], [UserStatus], [UpdatedDate], [CreatedDate]) VALUES (98, N'Jasper', 2, 1, NULL, CAST(0x0000AC8600000000 AS DateTime))
+GO
+INSERT [dbo].[User] ([UserId], [UserName], [GroupId], [UserStatus], [UpdatedDate], [CreatedDate]) VALUES (99, N'Felix', 2, 1, NULL, CAST(0x0000AC8600000000 AS DateTime))
+GO
+INSERT [dbo].[User] ([UserId], [UserName], [GroupId], [UserStatus], [UpdatedDate], [CreatedDate]) VALUES (100, N'Jamie', 2, 1, NULL, CAST(0x0000AC8600000000 AS DateTime))
+GO
+SET IDENTITY_INSERT [dbo].[User] OFF
+GO
+ALTER TABLE [dbo].[User]  WITH CHECK ADD  CONSTRAINT [FK_User_Group] FOREIGN KEY([GroupId])
+REFERENCES [dbo].[Group] ([GroupId])
+GO
+ALTER TABLE [dbo].[User] CHECK CONSTRAINT [FK_User_Group]
+GO

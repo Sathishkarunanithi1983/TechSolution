@@ -1,0 +1,47 @@
+﻿
+@{
+    ViewBag.Title = "AddUser";
+}
+
+<h2>AddUser</h2>
+
+<form id="myForm" name="myForm">
+    <div class="container">
+
+        <div class="form-group">
+            <label class="col-md-12 control-label" for="username">User Name</label>
+            <div class="col-lg-12 col-md-12 form-group">
+                <div class="col-lg-12 input-group">
+                    <input type="text" id="txtUserName" name="txtUserName" class="form-control" placeholder="Enter user name" required />
+                </div>
+            </div>
+            <div></div>
+        </div>
+        <div class="form-group ">
+            <label class="col-md-12 control-label" for="groupname">
+                Group Name
+            </label>
+            <div class="col-md-12 form-group">
+                <select id="selectGroupName" name="selectGroupName" class="form-control" required>
+                    <option value="">Select GroupName</option>
+                </select>
+            </div>
+        </div>
+        <div class="form-group ">
+            <label class="col-md-12 control-label" for="txtDOB">
+                Action
+            </label>
+            <div class="col-md-12 form-group">
+                <select id="selectAction" name="selectAction" class="control-valid form-control" required>
+                    <option value="">Select Action</option>
+                    <option value="0">Active</option>
+                    <option value="1">InActive</option>
+                </select>
+            </div>
+        </div>
+
+
+        <button  id="btnUserAdd" type="button" class="btn btn-primary">Submit</button>
+    </div>
+</form>
+<script src="@Url.Content("~/Scripts/site/AddUser.js")" type="text/javascript"></script>

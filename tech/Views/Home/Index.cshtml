@@ -1,0 +1,20 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+    <div>
+        
+        <a class="btn btn-primary" id="btnAddUser" href="/Home/AddUser">Add User</a>
+        <!-- Custom Filter -->
+        <!-- Table -->
+        <table id='empTable' class='display dataTable'>
+            <thead>
+                <tr>
+                    <th>User Name</th>
+                    <th>Group Name</th>
+                </tr>
+            </thead>
+
+        </table>
+    </div>
+<script src="@Url.Content("~/Scripts/site/userlist.js")" type="text/javascript"></script>
